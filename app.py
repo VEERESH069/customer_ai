@@ -14,8 +14,7 @@ st.set_page_config(page_title="Creative RAG Agent", layout="wide")
 
 # Initialize connections (this is cached)
 try:
-    # google_api_key = st.secrets["GOOGLE_API_KEY"]
-    google_api_key = "AIzaSyB7mY6VvjecZen74hllNIVH1IAvocrDCgw"
+    google_api_key = st.secrets["GOOGLE_API_KEY"]
     genai.configure(api_key=google_api_key)
     pc, _ = get_pinecone_and_embedding_model()
     pinecone_index = initialize_pinecone_index(pc)
