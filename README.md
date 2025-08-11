@@ -49,6 +49,23 @@ I've tried to make it as simple as possible to get this running locally.
 *   A **Google API Key** with the Gemini API enabled.
 *   A **Pinecone API Key** from a free Pinecone account.
 
+### **Architecture Diagram**
+[ Streamlit UI ]
+     ↓
+[ Upload PDF / Image ]
+     ↓
+[ File Type Detection ]
+      ├─ PDF: PyPDF2 → extract text → chunk (1000 chars) → Sentence-Transformers embed → Pinecone upsert
+      └─ Image: Pillow (PIL) load → send directly to Gemini Vision (optional: embed for RAG if text detected)
+     ↓
+[ Pinecone Vector Store ]
+     ↓
+[ Query Flow ]
+    user question → embed (Sentence-Transformers) → Pinecone retrieve → relevant chunks → Gemini Pro Vision → answer
+     ↓
+[ UI shows answer in Streamlit ]
+
+
 ### **Setup Steps**
 
 1.  **Clone this repository:**
