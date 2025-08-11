@@ -51,19 +51,31 @@ I've tried to make it as simple as possible to get this running locally.
 
 ### **Architecture Diagram**
 [ Streamlit UI ]
-     ↓
-[ Upload PDF / Image ]
-     ↓
+      
+     ↓   
+     
+[ Upload PDF / Image ] 
+
+     ↓   
+     
 [ File Type Detection ]
+      
+
       ├─ PDF: PyPDF2 → extract text → chunk (1000 chars) → Sentence-Transformers embed → Pinecone upsert
+         
       └─ Image: Pillow (PIL) load → send directly to Gemini Vision (optional: embed for RAG if text detected)
-     ↓
+         
+        ↓
 [ Pinecone Vector Store ]
-     ↓
+
+        ↓
 [ Query Flow ]
+   
     user question → embed (Sentence-Transformers) → Pinecone retrieve → relevant chunks → Gemini Pro Vision → answer
-     ↓
+    
+        ↓
 [ UI shows answer in Streamlit ]
+   
 
 
 ### **Setup Steps**
