@@ -9,7 +9,7 @@ from modules.pinecone_utils import get_pinecone_and_embedding_model, initialize_
 from modules.gemini_utils import get_gemini_response, PERSONA_PROMPTS, FORMAT_PROMPTS
 
 #  Page Configuration and Initialization 
-st.set_page_config(page_title="Creative RAG Agent", layout="wide")
+st.set_page_config(page_title="Creative RAG Agent by Veeresh", layout="wide")
 
 # Initialize connections (this is cached)
 try:
