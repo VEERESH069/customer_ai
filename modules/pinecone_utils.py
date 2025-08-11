@@ -9,7 +9,7 @@ EMBEDDING_DIMENSION = 384  # Based on 'all-MiniLM-L6-v2'
 
 @st.cache_resource
 def get_pinecone_and_embedding_model():
-    """Initializes Pinecone connection and the embedding model."""
+    """Initializing Pinecone connection and the embedding model."""
     try:
         pinecone_api_key = st.secrets["PINECONE_API_KEY"]
         pc = Pinecone(api_key=pinecone_api_key)
