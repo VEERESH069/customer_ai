@@ -1,12 +1,12 @@
 # My Multimedia AI Agent (TimeAI Assignment)
 
-Hello! This is my submission for the TimeAI take-home assignment. I was incredibly excited by the challenge: build a multimedia document agent from scratch. This project was a fantastic learning experience, and I'm proud of what I was able to build in just a few days.
+Hello! This is my submission for the Ai assignment. I was incredibly excited by the challenge: build a multimedia document agent from scratch. This project was a fantastic learning experience, and I'm proud of what I was able to build in just a few days.
 
 The goal was to create an agent that could intelligently process PDFs, images, and even videos. I decided to take this a step further by building a full **Retrieval-Augmented Generation (RAG)** pipeline for PDFs using Pinecone, which allows for much more efficient and scalable document analysis.
 
 ---
 
-## 🚀 Core Features
+##  Core Features
 
 This isn't just a simple Q&A bot. I've built a feature-rich agent with several key capabilities:
 
@@ -20,7 +20,7 @@ This isn't just a simple Q&A bot. I've built a feature-rich agent with several k
 
 ---
 
-## 🏛️ My Architectural Journey
+##  My Architectural Journey
 
 I started with a simple plan but decided to push myself to build something more robust and scalable.
 
@@ -36,11 +36,11 @@ Here’s a breakdown of the final architecture:
     *   `gemini_utils.py`: This is the final link to the AI. It takes all the context (whether from Pinecone or direct file analysis), combines it with the user's question and creative instructions (persona/format), and gets the final answer from the **Google Gemini 1.5 Flash** model.
 
 ![Architecture Diagram](https://i.imgur.com/YOUR_ARCHITECTURE_DIAGRAM_URL.png )
-*(I would create a simple diagram in a tool like diagrams.net or Google Slides and upload it to a site like Imgur to get a URL for this link.)*
+image is also included in repo,
 
 ---
 
-## 💻 Getting it Running
+##  Getting it Running
 
 I've tried to make it as simple as possible to get this running locally.
 
@@ -80,7 +80,7 @@ I've tried to make it as simple as possible to get this running locally.
 
 ---
 
-## 🤔 Challenges & What I Learned
+##  Challenges & What I Learned
 
 This project was a sprint, and I ran into some interesting challenges that were great learning opportunities:
 
@@ -88,4 +88,4 @@ This project was a sprint, and I ran into some interesting challenges that were 
 *   **Refactoring for Readability:** Midway through, my `app.py` file was becoming a monster. I made the decision to pause and refactor everything into a modular structure. It felt like a risk with the tight deadline, but it paid off immensely. The final code is so much cleaner and feels like a real application now.
 *   **The Power of RAG:** Seeing the RAG pipeline work for the first time was a huge "aha!" moment. Sending a whole document to an LLM is inefficient. Retrieving only the most relevant chunks first and then sending them to the LLM is so much smarter and more scalable. I'm really excited about the potential of this architecture.
 
-Thank you for the opportunity to work on this assignment. I had a lot of fun building it and I'm looking forward to discussing it further!
+Looking for wonderful feedback, Come on lets improve it together.
