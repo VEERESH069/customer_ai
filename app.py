@@ -4,12 +4,11 @@ import streamlit as st
 from PIL import Image
 import google.generativeai as genai
 
-# Import functions from our modules
 from modules.utils import process_pdf, process_video
 from modules.pinecone_utils import get_pinecone_and_embedding_model, initialize_pinecone_index, upsert_chunks_to_pinecone, query_pinecone
 from modules.gemini_utils import get_gemini_response, PERSONA_PROMPTS, FORMAT_PROMPTS
 
-# --- Page Configuration and Initialization ---
+#  Page Configuration and Initialization 
 st.set_page_config(page_title="Creative RAG Agent", layout="wide")
 
 # Initialize connections (this is cached)
@@ -26,7 +25,7 @@ except Exception as e:
 st.title("🎨 Creative & Modular Multimedia RAG Agent")
 st.markdown("An industry-standard application with selectable AI personas and output formats.")
 
-# Initialize session state
+# Initializing session state
 if "doc_type" not in st.session_state:
     st.session_state.doc_type = None
 if "doc_content" not in st.session_state:
