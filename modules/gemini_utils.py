@@ -2,7 +2,7 @@
 
 import google.generativeai as genai
 
-# Define the persona and format instructions here
+# Defining the persona and format instructions here
 PERSONA_PROMPTS = {
     "Default": "You are a helpful and intelligent assistant.",
     "Expert Analyst": "You are a world-class professional analyst. Your response should be formal, data-driven, and structured. Use bullet points and bold text to highlight key findings.",
