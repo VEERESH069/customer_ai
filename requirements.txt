@@ -1,6 +1,6 @@
 streamlit
 google-generativeai
-pypdf
+pypdf2
 Pillow
 opencv-python
 pinecone
