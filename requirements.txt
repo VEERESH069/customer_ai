@@ -5,3 +5,4 @@ Pillow
 opencv-python
 pinecone
 sentence-transformers
+PyPDF2
