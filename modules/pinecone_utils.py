@@ -12,7 +12,7 @@ def get_pinecone_and_embedding_model():
     """Initializes Pinecone connection and the embedding model."""
     try:
         # pinecone_api_key = st.secrets["PINECONE_API_KEY"]
-        pinecone_api_key = "pcsk_344CPK_Q5D2jArpwsmheKqmtS55YuBcu7UZ7waSmwyELXLLe46rupKm2Py3fPB3MKJ8o3z"
+        pinecone_api_key = st.secrets["PINECONE_API_KEY"]
         pc = Pinecone(api_key=pinecone_api_key)
         embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
         return pc, embedding_model

@@ -51,3 +51,18 @@ def get_gemini_response(base_prompt, persona, output_format):
     except Exception as e:
         return f"Error communicating with Gemini API: {e}"
 
+# Add this to modules/gemini_utils.py
+
+def start_chat_session(history=[]):
+    """Starts a new chat session with the Gemini model, optionally with existing history."""
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
+    chat = model.start_chat(history=history)
+    return chat
+
+def send_chat_message(chat_session, prompt):
+    """Sends a message in an ongoing chat session and returns the response."""
+    try:
+        response = chat_session.send_message(prompt)
+        return response.text
+    except Exception as e:
+        return f"Error sending message: {e}"
